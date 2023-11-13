@@ -1,0 +1,173 @@
+/* 햄버거 아이콘 스타일 */
+.menu-icon {
+  display: none;
+  /* 일단은 화면에 보이지 않게 숨겨둠 */
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    display: none;
+    /* 일단은 화면에 보이지 않게 숨겨둠 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding-top: 60px;
+    /* 햄버거 아이콘 높이만큼 여백 추가 */
+    box-sizing: border-box;
+  }
+
+  /* 햄버거 아이콘 보이게 설정 */
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+}
+
+/* 태블릿 화면 스타일 */
+@media screen and (min-width: 787px) and (max-width: 1024px) {
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding-top: 60px;
+    box-sizing: border-box;
+    z-index: 999;
+    animation: slideIn 0.5s ease-out;
+    /* Add animation for sliding in */
+  }
+
+  .menu a {
+    font-size: 24px;
+    /* Adjust font size */
+    letter-spacing: 2px;
+    /* Adjust letter spacing */
+    /* Other menu item styles... */
+  }
+
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  /* Animation Keyframes */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .menu.show {
+    transform: translateX(0);
+    /* 햄버거 아이콘 클릭 시 화면 안으로 이동 */
+    display: block;
+  }
+
+  .menu-details ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+
+  .menu-details ul li,
+  .m-0:nth-child(n+1) {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #storyTextContainer {
+    text-align: center;
+  }
+
+  #storyImage {
+    width: 60%;
+    order: -1;
+  }
+
+  #nextButton {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 786px) and (min-width: 0px) {
+  body {
+    overflow: hidden; /* Add this line to prevent scrolling when the menu is open */
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding-top: 60px;
+    box-sizing: border-box;
+    z-index: 999;
+    animation: slideDown 0.5s ease-out; /* Add animation for sliding down */
+  }
+
+  .menu a {
+    font-size: 20px; /* Adjust font size */
+    letter-spacing: 1px; /* Adjust letter spacing */
+    /* Other menu item styles... */
+  }
+
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .menu li:hover{
+    background-color: #6372ca;
+  }
+
+  /* Animation Keyframes */
+  @keyframes slideInRightCenter {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .menu.show {
+    display: flex;
+    animation: slideInRightCenter 0.5s ease-out;
+  }
+}

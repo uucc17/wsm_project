@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: #ffffff;
+    background-color: #807171;
+    text-align: center;
+    margin: 0;
+}
+
+.container{
+    background-image: url('../image/img/ending.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box; /* padding과 border를 전체 너비에 포함 */
+    overflow: hidden; /* 스크롤 제거 */
+}
+
+
+.vase{
+    position: absolute;
+    top: 75%;
+    left: 25%;
+}
+
+@media screen and (max-width:1023px) and (min-width:768) {
+    
+}
+
+@media screen and (max-width:767px){
+    .container{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: auto calc(100% - 10rem); /* 높이 기준으로 x축 auto, y축 calc */    
+    
+        max-height: 717px; /* 이미지 실제 세로길이 for 데스크탑. 넘으면 픽셀 터짐! */
+        height: 0;
+        padding-top: 70%; /* 모바일은 PC 사이즈의 60%로 줄어든다 */
+    }
+}

@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: h;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.Erin{
+    background-color: #e1a3fa;
+    width: 50%;        
+    float: left;
+    z-index: 2;
+    height: 100vh;
+    align-items:center; 
+    display: flex; 
+    justify-content:center;
+}
+
+.Angela{
+    background-color: #8294e3;
+    width: 50%;
+    z-index: 2;     
+    float: right;
+    height: 100vh;
+    align-items:center; 
+    display: flex; 
+    justify-content:center;
+}
+
+.jin {
+    width: 500px;
+    height: 500px;
+    background-color: #505872;
+    color: aliceblue;
+    font-size: 50px;
+    text-align: center;
+    display: table;
+    z-index: 1;
+    position: absolute; /* 추가: .jin에 position: absolute; 적용 */
+    top: 50%; /* 추가: 정중앙 수직으로 이동 */
+    left: 50%; /* 추가: 정중앙 수평으로 이동 */
+    transform: translate(-50%, -50%); /* 추가: 정중앙 정렬을 위한 transform */
+}
+
+.btn.text-white{
+    width: 350px;
+    height: 50px;
+    color: aliceblue;
+    background-color: #6486f4;
+    font-size: 25px;
+    margin-bottom: 35px;
+    border-radius: 13px;
+    border: 0px;
+}
+
+.btn.text-white:hover{
+    color: #6486f4;
+    background-color: aliceblue;
+}
+
+@media screen and (max-width:1023px) and (min-width:768px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Erin,
+    .Angela {
+        width: 100%;
+        height: 50vh;
+        position: relative; /* 상대 위치 설정 */z-index: 1;
+    }
+
+    .Angela img {
+        /* .Angela의 이미지 스타일 */
+        width: 100%; /* 이미지를 100%로 설정하여 부모 요소에 맞춤 */
+        max-width: 500px; /* 최대 너비 설정 (원하는 크기로 조절) */
+        margin-top: 150px; /* 이미지를 위로 20px만큼 내림 (조절 가능) */
+    }
+
+    .jin {
+        width: 350px;
+        height: 350px;
+        background-color: #505872;
+        color: aliceblue;
+        font-size: 30px;
+        text-align: center;
+        display: table;
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 20px; /* 또는 다른 값으로 조절하여 원하는 간격 설정 */
+        order: -1;
+    }
+}
+
+@media screen and (max-width:767px){
+    .jin {
+        width: 100%;
+        height: 150px;
+        font-size: 20px;
+        top: 10%; /* 예시로 10%로 설정, 원하는 위치로 조절 가능 */
+    }
+}

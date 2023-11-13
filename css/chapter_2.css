@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('https://mblogthumb-phinf.pstatic.net/MjAxODAzMDNfMjU4/MDAxNTIwMDQxODA4Mjc0.gR3L5xx3IbpACbvRRF9j9xjJmO-EPAY35oF1AdBnDcog.WZyeqFi6cMmH-v-R-ec44Ny6ZgVyAJIYMT78p4Rxbkwg.PNG.osy2201/2_%2850%ED%8D%BC%EC%84%BC%ED%8A%B8_%ED%9A%8C%EC%83%89%29_%ED%9A%8C%EC%83%89_%EB%8B%A8%EC%83%89_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_180303.png?type=w800');
+    background-size: cover;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #333;
+}
+
+#storyTextContainer {
+    margin-top: 20px;
+    font-size: 30px;
+    width: 80%;
+    max-width: 800px;
+    padding: 30px;
+    border: 5px solid #6372ca;
+    border-radius: 15px;
+    color: #e7e3e3;
+    background-color: #6372ca;
+    text-align: left;
+    order: 2;
+    /* 대사창을 뒤쪽에 배치 */
+}
+
+#storyImage {
+    width: 100%;
+    max-width: 800px;
+    order: 1;
+    /* 이미지를 앞쪽에 배치 */
+}
+
+.story-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#nextButton {
+    width: 85px;
+    height: 50px;
+    font-size: 25px;
+    margin-top: 20px;
+    order: 3;
+    /* 버튼을 맨 뒤에 배치 */
+    margin-left: 25em;
+}
+
+.menu {
+    background-color: #f2f2f2;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 20px;
+}
+
+.menu-details ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-details ul li,
+.m-0:nth-child(n+1) {
+    display: inline-block;
+    margin-right: 45px;
+}
+
+.menu-details ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-details li:hover {
+    background: #6372ca;
+    color: #f2f2f2 !important;
+}
+
+@media screen and (min-width: 787px) and (max-width: 1024px) {
+    .story-content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #storyTextContainer {
+        order: 2;
+        /* 대사창을 아래로 이동 */
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #storyImage {
+        order: 1;
+        /* 이미지를 대사창 위로 이동 */
+    }
+
+    #nextButton {
+        margin: 20px 0;
+        /* 간격 조정 */
+    }
+
+    footer {
+        display: none;
+    }
+
+    .menu-details ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        /* Change to left alignment */
+    }
+
+    .menu-details ul li,
+    .m-0:nth-child(n+1) {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 786px) and (min-width: 0px) {
+    .story-content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #storyTextContainer {
+        order: 2;
+        /* 대사창을 아래로 이동 */
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #storyImage {
+        order: 1;
+        /* 이미지를 대사창 위로 이동 */
+    }
+
+    #nextButton {
+        margin: 20px 0;
+        /* 간격 조정 */
+    }
+
+    .menu-details ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        /* Center-align text */
+    }
+
+    .menu-details ul li,
+    .m-0:nth-child(n+1) {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
